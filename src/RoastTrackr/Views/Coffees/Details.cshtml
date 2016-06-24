@@ -1,0 +1,30 @@
+@model RoastTrackr.Models.Coffee
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Coffee</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CoffeeName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CoffeeName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Inventory)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Inventory)
+        </dd>
+    </dl>
+</div>
+<p>
+    <a class="btn btn-default" asp-action="Edit" asp-route-id="@Model.CoffeeId">Edit</a> 
+    <a class="btn btn-default" asp-action="Index">Back to List</a>
+</p>

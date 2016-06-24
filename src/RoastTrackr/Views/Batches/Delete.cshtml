@@ -1,0 +1,44 @@
+@model RoastTrackr.Models.Batch
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+<h3>Are you sure you want to delete this batch?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BatchTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BatchTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BatchWeight)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BatchWeight)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CoffeeName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CoffeeName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EndTemp)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EndTemp)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> 
+            <a class="btn btn-default" asp-action="Index">Back to List</a>
+        </div>
+    </form>
+</div>

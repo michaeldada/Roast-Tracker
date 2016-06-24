@@ -1,0 +1,50 @@
+@model IEnumerable<RoastTrackr.Models.Batch>
+
+@{
+    ViewData["Title"] = "Batches";
+}
+
+<h2>Batch List</h2>
+
+<p>
+    <a class="btn btn-default" asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BatchTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BatchWeight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CoffeeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EndTemp)
+        </th>
+        <th></th>
+    </tr>
+    
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BatchTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BatchWeight)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CoffeeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EndTemp)
+        </td>
+        <td>
+            <a  class="btn btn-default" asp-action="Edit" asp-route-id="@item.BatchId">Edit</a> 
+            <a class="btn btn-default"  asp-action="Details" asp-route-id="@item.BatchId">Details</a> 
+            <a  class="btn btn-danger"asp-action="Delete" asp-route-id="@item.BatchId">Delete</a>
+        </td>
+    </tr>
+}
+</table>

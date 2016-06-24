@@ -1,0 +1,74 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model IEnumerable<RoastTrackr.Models.Coffee>
+
+
+
+
+@using System.Security.Claims
+
+
+
+    @if (User.IsSignedIn())
+
+    {
+        
+            <h2>Welcome Back, @User.GetUserName()!</h2>
+    
+
+            @if (Model.Count() > 0)
+            {
+                <div class="jumbotron">
+                    <h3>Below is a list of your current green coffee inventory.</h3>
+                    <h4>Click Batches to add a new batch or view recently completed roasts!</h4>
+                    <h4>Click Coffees to manage your green coffee inventory!</h4>
+
+                    <a class="btn btn-default" href="/Batches">Batches</a>
+                    <a class="btn btn-default" href="/Coffees">Coffees</a>
+                </div>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.CoffeeName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Inventory)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoffeeName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Inventory)
+                    </td>
+                </tr>
+            }
+        </table>
+            }
+            else
+            {
+                <div class="jumbotron">
+                    <h3>It doesn't look like you have added any green coffee inventory yet.  Click on the Coffees tab to get started!</h3>
+                    <a class="btn btn-default" href="/Batches">Batches</a>
+                    <a class="btn btn-default" href="/Coffees">Coffees</a>
+                </div>
+            }
+
+    }
+
+    else
+    {
+        <div class="jumbotron">
+            <h2 id="welcome-header">Welcome to Roast Tracker</h2>
+
+            <img id="coffee-landing-img" src="~/images/coffee.jpg" />
+
+            <h4>Get started by signing up or logging in to start tracking your roast history and green coffee inventory today!</h4>
+        </div>
+    }

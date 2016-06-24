@@ -1,0 +1,64 @@
+@model RoastTrackr.Models.Batch
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<form asp-action="Create">
+    <div class="form-horizontal">
+        <h4>Batch</h4>
+        <hr />
+        <div asp-validation-summary="ValidationSummary.ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="BatchTime" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="BatchTime" class="form-control" />
+                <span asp-validation-for="BatchTime" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="BatchWeight" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="BatchWeight" class="form-control" />
+                <span asp-validation-for="BatchWeight" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="CoffeeId" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="CoffeeId" asp-items="ViewBag.CoffeeId" class ="form-control"></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="CoffeeName" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="CoffeeName" class="form-control" />
+                <span asp-validation-for="CoffeeName" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="EndTemp" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="EndTemp" class="form-control" />
+                <span asp-validation-for="EndTemp" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a class="btn btn-default" asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
