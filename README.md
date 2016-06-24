@@ -2,7 +2,7 @@
 
 #### _A Logging Tool for Coffee Roasters, 6/23/2016_
 
-#### By _Michael Dada_
+#### By **Michael Dada**
 
 ## Description
 
@@ -33,5 +33,5 @@ _C#, MSSQL, Visual Studio 2015, Entity Framework_
 
 *MIT License*
 
-Copyright (c) 2016 _Michael Dada_
+Copyright (c) 2016 **Michael Dada**
 
