@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # _Roast Tracker_
 
 #### _A Logging Tool for Coffee Roasters, 6/23/2016_
@@ -38,4 +37,3 @@ Copyright (c) 2016 **_Michael Dada_**
 =======
 # Roast-Tracker
 A Logging Tool for Coffee Roasters
->>>>>>> 181efad528e9be450577d0dd4c94ab4b6be01a7f
