@@ -2,7 +2,7 @@
 
 #### _A Logging Tool for Coffee Roasters, 6/23/2016_
 
-#### By _**Michael Dada**_
+#### By _Michael Dada_
 
 ## Description
 
@@ -33,7 +33,5 @@ _C#, MSSQL, Visual Studio 2015, Entity Framework_
 
 *MIT License*
 
-Copyright (c) 2016 **_Michael Dada_**
-=======
-# Roast-Tracker
-A Logging Tool for Coffee Roasters
+Copyright (c) 2016 _Michael Dada_
+
